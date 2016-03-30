@@ -1,0 +1,6 @@
+node
+node_modules
+target
+src/main/resources/static/build
+src/main/resources/static/node
+src/main/resources/static/node_modules

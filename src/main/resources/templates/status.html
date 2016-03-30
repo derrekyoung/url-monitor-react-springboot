@@ -1,0 +1,37 @@
+<!DOCTYPE HTML SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout">
+<head>
+<title>Status - AppDynamics Infrastructure</title>
+</head>
+<body>
+	<div layout:fragment="content">
+		<table class="table table-bordered">
+			<thead>
+				<tr class="btn-success">
+					<th>URL</th>
+					<th>Host Reachable</th>
+					<th>Response</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:if="${#lists.isEmpty(allUrls)}" class="btn-warning">
+					<td colspan="4" align="center">No URLs saved</td>
+				</tr>
+				<tr th:each="url : ${allUrls}">
+					<td th:text="${url.url}"></td>
+					<td th:text="${url.hostReachable}"></td>
+					<td th:text="${url.response}"></td>
+				</tr>
+
+			</tbody>
+		</table>
+		<form th:action="@{/status}" method="post">
+			<label for="url">URL:</label> <input type="text" name="url" placeholder="http://www.example.com" />
+			<label for="expectedContent">Expected Content:</label> <input type="text" name="expectedContent" placeholder="Optional" /> 
+			<input type="submit" />
+		</form>
+	</div>
+</body>
+</html>
