@@ -1,3 +1,8 @@
+.classpath
+.mvn/
+.project
+.settings/
+.springBeans
 node
 node_modules
 target
