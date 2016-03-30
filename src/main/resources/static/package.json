@@ -9,6 +9,14 @@
     "data",
     "react"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:derrekyoung/url-monitor-react-springboot"
+  },
+  "bugs": {
+    "url": "https://github.com/derrekyoung/url-monitor-react-springboot/issues"
+  },
+  "homepage": "https://github.com/derrekyoung/url-monitor-react-springboot",
   "author": "Derrek Young",
   "license": "MIT",
   "dependencies": {
