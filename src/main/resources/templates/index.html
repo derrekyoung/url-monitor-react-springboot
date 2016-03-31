@@ -7,7 +7,9 @@
 	<div layout:fragment="content">
 		 <div id="react"></div>
     
-    	<div th:replace="/fragments/js"></div>
+    	<script th:src="@{/webjars/jquery/2.2.2/jquery.min.js}"></script>
+		<script th:src="@{/webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>
+		<script src="build/bundle.js"></script>
 	</div>
 </body>
 </html>

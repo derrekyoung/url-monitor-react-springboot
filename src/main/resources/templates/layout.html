@@ -4,15 +4,31 @@
   <head>
     <!--  Each token will be replaced by their respective titles in the resulting page. -->
     <title layout:title-pattern="$DECORATOR_TITLE - $CONTENT_TITLE"></title>
-    <link th:replace="/fragments/style"/>
+    
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.6/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/3.3.6/css/bootstrap.min.css}" rel="stylesheet" media="screen" /> 
+	<link th:href="@{/webjars/font-awesome/4.5.0/css/font-awesome.css}" rel="stylesheet" />
+
+	<link rel="stylesheet" href="build/bundle.css" />
   </head>
   <body>
-    <div th:replace="/fragments/header"></div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container">
+	    <h1 class="navbar-text">URL Monitor</h1>
+	    <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+          </ul>
+	  </div>
+	</nav>
     
     <div class="container" style="margin-top:80px;">
       <div layout:fragment="content"></div>
     </div>
     
-    <div th:replace="/fragments/footer"></div>
+    <nav class="navbar navbar-inverse navbar-fixed-bottom">
+	  <div class="container">
+	    <p class="navbar-text">Made with <span class="glyphicon glyphicon-heart" aria-hidden="true"></span> by <a href="http://www.derrekyoung.com">Derrek Young</a></p> 
+	  </div>
+	</nav>
   </body>
 </html>
