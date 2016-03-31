@@ -7,11 +7,11 @@
 	<groupId>com.derrekyoung</groupId>
 	<artifactId>url-monitor</artifactId>
 	<version>1.0.0-BETA</version>
-	<packaging>war</packaging>
 
 	<name>UrlMonitor</name>
-	<description>Utility to check the AppDynamics plumbing</description>
-
+	<description>Test URLs to see if they respond and if the response has the correct data. Built with Spring Boot and React in order to test the feasability of that combo.</description>
+	<url>https://github.com/derrekyoung/url-monitor-react-springboot</url>
+	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -144,6 +144,4 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-
 </project>
