@@ -1,5 +1,6 @@
 ~/
 *.db
+*.log
 .classpath
 .mvn/
 .project
