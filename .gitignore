@@ -1,3 +1,4 @@
+*.db
 .classpath
 .mvn/
 .project
