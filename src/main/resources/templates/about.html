@@ -1,19 +1,93 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout">
 <head>
-  <title>URL Monitor - About</title>
+<title>URL Monitor - About</title>
 </head>
 <body>
 	<div layout:fragment="content">
 		<h1>About</h1>
-		<p>This is a hobby project that I created on my own.</p>
-		<p>The basic idea is to ping a URL and see if it 
-		<br/>
-		a) responds with a 200 <br/>
-		b) if that response contains the text that you're expecting.</p>
-		<p>Actually though, I mostly wanted to experiment with merging Node.js and Spring Boot 
-		into a self-contained application. This app uses Spring Boot, Webpack, Node, React, Bootstrap, and a few other modules.</p>
-		<p>You can find more info on the <a href="https://github.com/derrekyoung/url-monitor-react-springboot/">GitHub repo</a> or by emailing derrek @ derrek.young.com</p>
+
+		<p>Test URLs to see if they respond and if the response has the
+			correct data. Built with Spring Boot and React in order to test the
+			feasibility of that combo.</p>
+
+		<p>This is a hobby project that I created on my own. The basic
+			idea is to ping a URL and see if it</p>
+
+		<ul>
+			<li>responds with a 200</li>
+			<li>if that response contains the text that you're expecting.</li>
+		</ul>
+
+		<p>
+			You're able to add <strong>single URLs</strong> and <strong>export/import</strong>
+			them in bulk. The app also supports <strong>auto-refresh</strong>
+			every minute.
+		</p>
+
+		<h2>Prerequisites</h2>
+
+		<ul>
+			<li>Java 8 (to run)</li>
+			<li>Maven 3 (to build and/or run)</li>
+		</ul>
+
+		<h2>Usage</h2>
+
+		<p>
+			Download a release from <a
+				href="https://github.com/derrekyoung/url-monitor-react-springboot/releases/latest/">the
+				releases page</a>.
+		</p>
+
+		<p>
+			Run from the command line:
+			<code>java -jar url-monitor-VERSION.jar</code>
+		</p>
+
+		<p>
+			This will start an embedded Tomcat server inside the war file. Then
+			navigate to the local server <a href="http://localhost:8080">http://localhost:8080</a>
+			or the remote server where you started the app http://your<em>server</em>here:8080
+		</p>
+
+		<h2>Possible Next Steps</h2>
+
+		<ul>
+			<li>remove node/ and node_modules/ from the final jar (The final
+				jar is too big, 100+ MB. That could easily come down by removing
+				those directories.)</li>
+			<li>add Java tests (This was a non-prod, hobby project so I cut
+				some corners... my bad.)</li>
+		</ul>
+
+		<h2>Help and More Info</h2>
+
+		<p>You can find more info on the GitHub repo or by emailing derrek
+			@ derrek.young.com</p>
+
+		<p>https://github.com/derrekyoung/url-monitor-react-springboot/</p>
+
+		<h2>Closing Thoughts</h2>
+
+		<p>Actually though, my main motivation for this project was mostly
+			wanted to experiment with merging React and Spring Boot into a
+			self-contained, cross-platform application. This app uses Spring
+			Boot, Webpack, Node, React, Bootstrap, and a few other modules.</p>
+
+		<p>The experiment was mostly a success but I think this combo is
+			not the way to go for cross-platform apps. Server-side web apps,
+			sure, ok, maybe. But the dev process here kind of sucks. Merging
+			webpack with Spring Boot introduced too much latency in the test
+			cycle compared to a straight Node.js cycle. This combo takes all the
+			good things of React/Node and ruins them. I think that my next
+			cross-platform app/experiment will be pure Node.js and based on
+			Electron or NW.js. We shall see.</p>
+
+		<br /><br /><br /><br /><br />
+
 	</div>
 </body>
 </html>
