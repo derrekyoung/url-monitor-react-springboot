@@ -1,7 +1,7 @@
 # url-monitor-react-springboot
 ![Alt text](/src/main/resources/static/images/screenshot-url-monitor-main-page.png?raw=true "Sreenshot of main page")
 
-Test URLs to see if they respond and if the response has the correct data. Built with Spring Boot and React in order to test the feasability of that combo.
+Test URLs to see if they respond and if the response has the correct data. Built with Spring Boot and React in order to test the feasibility of that combo.
 
 This is a hobby project that I created on my own. The basic idea is to ping a URL and see if it 
 
