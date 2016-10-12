@@ -11,7 +11,7 @@ This is a hobby project that I created on my own. The basic idea is to ping a UR
 You're able to add **single URLs** and **export/import** them in bulk. The app also supports **auto-refresh** every minute.
 
 ## Prerequisites
-* Java 8 (to run)
+* Java 7+ (to run)
 * Maven 3 (to build and/or run)
 
 ## Usage
